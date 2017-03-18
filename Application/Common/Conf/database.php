@@ -16,5 +16,5 @@ return array(
 	
 	'REDIS_HOST' =>'118.190.41.0',
 	'REDIS_PORT' =>'6379',
-	'REDIS_PWD' =>'',
+	'REDIS_PWD' =>'111',
 );
