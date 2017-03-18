@@ -2437,6 +2437,8 @@ function get_shop_set($id = 0, $field = NULL) {
 /* C：获取全局配置文件 */
 function C_READ($name = '', $mod = 'trial') {
 	 $caches =  getcache($mod,'activity_set');
+	 dump($caches);
+	 exit;
 	 if(!$caches || empty($caches)){
 	 	 $lists = model('activity_set')->distinct(true)->field('activity_type')->select();
          foreach ($lists as $k => $v) {
