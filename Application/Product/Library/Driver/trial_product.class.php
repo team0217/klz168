@@ -186,7 +186,7 @@ class trial_product extends \Product\Library\ProductInterface {
         }
         elseif ($this->user_info['groupid'] ==4)
         {
-        	$limit_cost=3000;
+        	$limit_cost=30000;
         }
         elseif ($this->user_info['groupid'] ==2)
         {
