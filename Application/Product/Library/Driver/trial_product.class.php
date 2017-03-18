@@ -35,7 +35,6 @@ class trial_product extends \Product\Library\ProductInterface {
     /* 抢购用户列表 */
     public function buyer_list($condition = array()) {
         $condition['goods_id'] = $this->product_info['id'];
-        
         return model('order')->where($condition)->order("id DESC")->group('buyer_id')->getField('buyer_id', TRUE);
     }
     
@@ -46,8 +45,6 @@ class trial_product extends \Product\Library\ProductInterface {
      */
     public function report_list($condition = array()) {
         $condition['goods_id'] = $this->product_info['id'];
-        dump($condition['goods_id']);
-        exit;
         return model('report')->where($condition)->order("id DESC")->select();
        
     }
@@ -58,6 +55,8 @@ class trial_product extends \Product\Library\ProductInterface {
      * $bind_id : 选择购买的淘宝帐号
      */
     public function pay_submit($talk = '',$bind_id = 0,$data_type=0) {
+        dump("-----1");
+        exit;
     	vendor('Redisent');
     	$this->redis=new \Redisent( C('REDIS_HOST'), C('REDIS_PORT'));
     	$this->redis->auth(C('REDIS_PWD'));
