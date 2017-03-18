@@ -15,10 +15,7 @@ class trial_product extends \Product\Library\ProductInterface {
      * @return array
      */
     public function getConfig() {
-       
         $result =  model('activity_set')->where(array('activity_type' => $this->product_info['mod']))->getField('key,value', TRUE);
-        dump($result['trial_name']);
-        exit;
         $result['trial_name'] = (string) $result['trial_name'];
         $result['single_mode'] = string2array($result['single_mode']);
         $result['seller_give_back'] = (int) $result['seller_give_back'];
@@ -38,6 +35,8 @@ class trial_product extends \Product\Library\ProductInterface {
     /* 抢购用户列表 */
     public function buyer_list($condition = array()) {
         $condition['goods_id'] = $this->product_info['id'];
+        dump($condition['goods_id']);
+        exit;
         return model('order')->where($condition)->order("id DESC")->group('buyer_id')->getField('buyer_id', TRUE);
     }
     
