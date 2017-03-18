@@ -55,9 +55,9 @@ class trial_product extends \Product\Library\ProductInterface {
      * $bind_id : 选择购买的淘宝帐号
      */
     public function pay_submit($talk = '',$bind_id = 0,$data_type=0) {
-        dump(C('REDIS_HOST'));
-        exit;
     	vendor('Redisent');
+    	dump(C('REDIS_PORT'));
+    	exit;
     	$this->redis=new \Redisent( C('REDIS_HOST'), C('REDIS_PORT'));
     	$this->redis->auth(C('REDIS_PWD'));
         // 检测用户权限
@@ -153,7 +153,7 @@ class trial_product extends \Product\Library\ProductInterface {
                 //累加用户当天支付金额
                 $cost=floatval($this->redis->get($this->user_info['userid'].'_'.date("md")));
                 $cost+=floatval($this->product_info['goods_price']);
-//                 $this->redis->set($this->user_info['userid'].'_'.date("md"),$cost);
+                $this->redis->set($this->user_info['userid'].'_'.date("md"),$cost);
                 //$this->redis->close();
                 return $order_id; 
             } else {
@@ -200,10 +200,7 @@ class trial_product extends \Product\Library\ProductInterface {
         }
         
         $cost=floatval($this->redis->get($this->user_info['userid'].'_'.date("md")));
-//         dump($cost);
         $cost+=floatval($this->product_info['goods_price']);
-//         dump($cost);
-//         exit;
         if($cost>$limit_cost){
         	$over=sprintf("%.2f", $cost-$limit_cost);
         	$limit_cost=sprintf("%.2f", $limit_cost);
@@ -271,9 +268,6 @@ class trial_product extends \Product\Library\ProductInterface {
         $wait_fill_num = model('order')->where($o_map)->count();
         /*购物返利限定抢购次数*/
         $count = C_READ('buyer_good_buy_times','trial');
-        dump($count);
-        dump($wait_fill_num);
-        exit;
         if($wait_fill_num >= $count) {
             $this->error = '您已抢购了该订单'.$count.'次，请勿重复抢购。';
             return FALSE;
