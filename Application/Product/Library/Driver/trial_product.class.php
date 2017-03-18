@@ -15,9 +15,10 @@ class trial_product extends \Product\Library\ProductInterface {
      * @return array
      */
     public function getConfig() {
-        dump("dddd");
-        exit;
+       
         $result =  model('activity_set')->where(array('activity_type' => $this->product_info['mod']))->getField('key,value', TRUE);
+        dump($result);
+        exit;
         $result['trial_name'] = (string) $result['trial_name'];
         $result['single_mode'] = string2array($result['single_mode']);
         $result['seller_give_back'] = (int) $result['seller_give_back'];
