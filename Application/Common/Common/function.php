@@ -2438,7 +2438,7 @@ function get_shop_set($id = 0, $field = NULL) {
 function C_READ($name = '', $mod = 'trial') {
 	 $caches =  getcache($mod,'activity_set');
 	 dump($caches);
-	 exit;
+// 	 exit;
 	 if(!$caches || empty($caches)){
 	 	 $lists = model('activity_set')->distinct(true)->field('activity_type')->select();
          foreach ($lists as $k => $v) {
