@@ -173,7 +173,7 @@ class trial_product extends \Product\Library\ProductInterface {
         $config = $this->getConfig();
         /*---- 限制买家参与 ----*/
         if(empty($this->user_info)) {
-            $this->error = '尚未登录';
+            $this->error = '尚未登录1111';
             return FALSE;
         }
         if($this->user_info['modelid'] != 1) {
@@ -278,7 +278,7 @@ class trial_product extends \Product\Library\ProductInterface {
             $o_map['status'] = array('NOT IN',array('0','7'));
             $is_over = model('order')->where($o_map)->count();
             if ($is_over > 0) {
-                $this->error = '当前还有未完成的订单，请订单完成后再继续下单';
+                $tihs->error = '当前还有未完成的订单，请订单完成后再继续下单';
                 return FALSE;
             }
         }       
