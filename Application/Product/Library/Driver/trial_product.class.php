@@ -182,8 +182,7 @@ class trial_product extends \Product\Library\ProductInterface {
         } 
         /*  用户等级当天限制额度 */
         if($this->user_info['groupid'] == 6){
-            dump("dddd1");
-            exit;
+            
         	 $limit_cost=5000;
         }elseif ($this->user_info['groupid'] == 5)
         {
@@ -203,6 +202,8 @@ class trial_product extends \Product\Library\ProductInterface {
         }
         
         $cost=floatval($this->redis->get($this->user_info['userid'].'_'.date("md")));
+        dump($cost);
+        exit;
         $cost+=floatval($this->product_info['goods_price']);
         if($cost>$limit_cost){
         	$over=sprintf("%.2f", $cost-$limit_cost);
