@@ -182,7 +182,7 @@ class trial_product extends \Product\Library\ProductInterface {
         } 
         /*  用户等级当天限制额度 */
         if($this->user_info['groupid'] == 6){
-            dump("dddd");
+            dump("dddd1");
             exit;
         	 $limit_cost=5000;
         }elseif ($this->user_info['groupid'] == 5)
