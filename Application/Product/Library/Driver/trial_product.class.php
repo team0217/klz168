@@ -173,7 +173,7 @@ class trial_product extends \Product\Library\ProductInterface {
         $config = $this->getConfig();
         /*---- 限制买家参与 ----*/
         if(empty($this->user_info)) {
-            $this->error = '尚未登录1111';
+            $this->error = '尚未登录';
             return FALSE;
         }
         if($this->user_info['modelid'] != 1) {
@@ -182,6 +182,8 @@ class trial_product extends \Product\Library\ProductInterface {
         } 
         /*  用户等级当天限制额度 */
         if($this->user_info['groupid'] == 6){
+            dump("dddd");
+            exit;
         	 $limit_cost=5000;
         }elseif ($this->user_info['groupid'] == 5)
         {
