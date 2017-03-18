@@ -151,8 +151,9 @@ class trial_product extends \Product\Library\ProductInterface {
                 //累加用户当天支付金额
                 $cost=floatval($this->redis->get($this->user_info['userid'].'_'.date("md")));
                 dump($cost);
-                exit;
                 $cost+=floatval($this->product_info['goods_price']);
+                dump($cost);
+                exit;
                 $this->redis->set($this->user_info['userid'].'_'.date("md"),$cost);
                 //$this->redis->close();
                 return $order_id; 
