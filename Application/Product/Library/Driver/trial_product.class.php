@@ -200,7 +200,7 @@ class trial_product extends \Product\Library\ProductInterface {
         	$this->error = '普通会员不能参与，请先升级会员帐号';
         	return FALSE;
         }
-        dump($this->redis->get($this->user_info['userid'].'_'.date("md")));
+        dump(date("md"));
         exit;
         $cost=floatval($this->redis->get($this->user_info['userid'].'_'.date("md")));
         
