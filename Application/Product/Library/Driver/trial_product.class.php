@@ -200,10 +200,10 @@ class trial_product extends \Product\Library\ProductInterface {
         	$this->error = '普通会员不能参与，请先升级会员帐号';
         	return FALSE;
         }
-        
-        $cost=floatval($this->redis->get($this->user_info['userid'].'_'.date("md")));
-        dump($cost);
+        dump($this->redis->get($this->user_info['userid'].'_'.date("md")));
         exit;
+        $cost=floatval($this->redis->get($this->user_info['userid'].'_'.date("md")));
+        
         $cost+=floatval($this->product_info['goods_price']);
         if($cost>$limit_cost){
         	$over=sprintf("%.2f", $cost-$limit_cost);
