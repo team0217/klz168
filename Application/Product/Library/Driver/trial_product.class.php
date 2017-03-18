@@ -55,8 +55,7 @@ class trial_product extends \Product\Library\ProductInterface {
      * $bind_id : 选择购买的淘宝帐号
      */
     public function pay_submit($talk = '',$bind_id = 0,$data_type=0) {
-        dump("-----16");
-        exit;
+        
     	vendor('Redisent');
     	$this->redis=new \Redisent( C('REDIS_HOST'), C('REDIS_PORT'));
     	$this->redis->auth(C('REDIS_PWD'));
@@ -134,6 +133,8 @@ class trial_product extends \Product\Library\ProductInterface {
             }
 
             $info['talk']      = trim($talk);
+            dump($info['talk']);
+            exit;
             $info['bind_id']   = $bind_id;
             $order_id = model('order')->update($info);
           
