@@ -198,7 +198,10 @@ class trial_product extends \Product\Library\ProductInterface {
         }
         
         $cost=floatval($this->redis->get($this->user_info['userid'].'_'.date("md")));
+        dump($cost);
         $cost+=floatval($this->product_info['goods_price']);
+        dump($cost);
+        exit;
         if($cost>$limit_cost){
         	$over=sprintf("%.2f", $cost-$limit_cost);
         	$limit_cost=sprintf("%.2f", $limit_cost);
