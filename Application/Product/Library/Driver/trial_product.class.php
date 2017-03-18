@@ -269,6 +269,9 @@ class trial_product extends \Product\Library\ProductInterface {
         $wait_fill_num = model('order')->where($o_map)->count();
         /*购物返利限定抢购次数*/
         $count = C_READ('buyer_good_buy_times','trial');
+        dump($count);
+        dump($wait_fill_num);
+        exit;
         if($wait_fill_num >= $count) {
             $this->error = '您已抢购了该订单'.$count.'次，请勿重复抢购。';
             return FALSE;
