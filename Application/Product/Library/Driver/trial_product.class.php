@@ -35,8 +35,7 @@ class trial_product extends \Product\Library\ProductInterface {
     /* 抢购用户列表 */
     public function buyer_list($condition = array()) {
         $condition['goods_id'] = $this->product_info['id'];
-        dump($condition['goods_id']);
-        exit;
+        
         return model('order')->where($condition)->order("id DESC")->group('buyer_id')->getField('buyer_id', TRUE);
     }
     
@@ -47,6 +46,8 @@ class trial_product extends \Product\Library\ProductInterface {
      */
     public function report_list($condition = array()) {
         $condition['goods_id'] = $this->product_info['id'];
+        dump($condition['goods_id']);
+        exit;
         return model('report')->where($condition)->order("id DESC")->select();
        
     }
