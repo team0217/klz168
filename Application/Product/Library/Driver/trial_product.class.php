@@ -56,6 +56,8 @@ class trial_product extends \Product\Library\ProductInterface {
      */
     public function pay_submit($talk = '',$bind_id = 0,$data_type=0) {
     	vendor('Redisent');
+    	dump(vendor('Redisent'));
+    	exit;
     	$this->redis=new \Redisent( C('REDIS_HOST'), C('REDIS_PORT'));
     	$this->redis->auth(C('REDIS_PWD'));
         // 检测用户权限
