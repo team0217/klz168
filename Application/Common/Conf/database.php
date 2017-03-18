@@ -14,7 +14,7 @@ return array(
     'DB_DEPLOY_TYPE'        =>  0, // 数据库部署方式:0 集中式(单一服务器),1
 	
 	
-	'REDIS_HOST' =>'118.190.41.10',
+	'REDIS_HOST' =>'118.190.41.1',
 	'REDIS_PORT' =>'6379',
-	'REDIS_PWD' =>'2222',
+	'REDIS_PWD' =>'333333333',
 );
