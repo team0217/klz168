@@ -193,7 +193,7 @@ class trial_product extends \Product\Library\ProductInterface {
         	$limit_cost=3000;
         }
         else{
-        	$this->error = '普通会员不能参与，请先升级会员帐号';
+        	$this->error = '普通会员不能参与，请先升级会员帐号111111';
         	return FALSE;
         }
         
