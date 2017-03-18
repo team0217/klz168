@@ -329,6 +329,8 @@ class trial_product extends \Product\Library\ProductInterface {
       
      /*重复ip检测*/
      $is_ip = $this->product_info['goods_tips']['goods_order']['is_ip'];
+     dump($is_ip);
+     exit;
      if ($is_ip == 1) {
             $ip_order = model('order')->where(array('seller_id'=>$this->product_info['company_id'],'goods_id'=>$this->product_info['id'],'ip'=>get_client_ip(),'status'=>array('GT',0)))->count();
                 if($ip_order > 0) {
