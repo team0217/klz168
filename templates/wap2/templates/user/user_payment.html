@@ -1,0 +1,94 @@
+<ion-view hide-nav-bar="true">
+ 	<div class="bar bar-header  bar-stable ">
+    	<a class="button  button-clear button-dark icon ion-ios-arrow-back"  href="#/tab/user/upvip"></a>
+  		<h1 class="title">订单支付</h1>
+ 	</div>
+ 	
+ 	<style>
+ 		.opay{
+ 			color: rgb(245,90,78);
+			border-bottom: 2px solid rgb(245,90,78);
+ 		}
+ 		.designated{
+ 			background: rgba(0,0,0,.1);
+ 		}
+ 	</style>
+ 	
+ 	<ion-content class="padding_head">
+ 		<div  class="list item"style="width: 100%;font-size: 18px;text-align: center;float: left;border: none;padding: 0;">
+ 			<div class="odiv opay" style="width: 50%;float: left;padding: 20px 0 10px 0;">支付</div>
+ 			<div class="odiv" style="width: 50%;float: left;padding: 20px 0 10px 0;">充值</div>
+ 		</div>
+    	<ul class="list payment" style="margin-bottom: 0;">
+		    <li class="item">
+		      	<span style="color: #666;font-size: 14px;">订单总价&nbsp;:</span>
+		      	<font class="total"  style="float: right;padding-right: 20px;"></font>
+		    </li>
+		    <li class="item">
+		      	<span style="color: #666;font-size: 14px;">账户余额&nbsp;:</span>
+		      	<font class="balance" style="float: right;padding-right: 20px;">168元</font>
+		    </li> 
+		</ul>
+		<div class="list recharge" style="display: none;margin-bottom: 0;">
+		    <label class="item item-input">
+		    	<input type="text" placeholder="请输入充值账号">
+		    </label>
+		    <label class="item item-input">
+		   		<input type="text" maxlength="9" placeholder="请输入充值金额"  onkeyup="value=value.replace(/[^\d]/g,'')" onbeforepaste="clipboardData.setData('text',clipboardData.getData('text').replace(/[^\d]/g,''))" style="ime-mode:Disabled">
+		    </label>
+		</div>
+		<div class="mode" style="font-size: 16px;font-weight: 600;padding: 30px 16px;">请选择支付方式</div>
+		<script>
+			$(function(){
+				
+				/*
+				$('.bar a').click(function(){
+					window.location.reload();
+				})*/
+				var val=sessionStorage.getItem('money');//将本地存储的价格取出
+				$('.total').text(val+'元');
+				
+				$('.odiv').click(function(){
+					 var index=$(this).index();
+					 $(this).addClass('opay').siblings().removeClass('opay');
+					 if(index==0){
+						$('.mode').text('请选择支付方式');
+					 	$('.account').show();
+					 	$('.payment').show();
+					 	$('.recharge').hide();
+					 }else{
+					 	$('.mode').text('请选择充值方式');
+					 	$('.account').hide();
+					 	$('.payment').hide();
+					 	$('.recharge').show();
+					 }
+				});
+				
+				$('a.item').click(function(){
+					$(this).addClass('designated').siblings().removeClass('designated');
+				});
+				
+			})
+		</script>
+		
+		<div class="list" style="margin-bottom: 50px;">
+		    <a class="item item-avatar account designated" href="">
+		      <img src="img/taojin.png">
+		      <h2>账户余额支付</h2>
+		      <p>可使用账户余额完成支付</p>
+		    </a>
+		    <a class="item item-avatar" href="">
+		      <img src="img/zhifubao.png">
+		      <h2>支付宝支付</h2>
+		      <p>推荐有支付宝账号的用户使用</p>
+		    </a>
+		    <a class="item item-avatar" href="">
+		      <img src="img/wx.png">
+		      <h2>微信支付</h2>
+		      <p>推荐安装微信5.0及以上版本的用户使用</p>
+		    </a>
+		</div>
+		<button class="button button-block button-energized" style="width: 90%;margin: auto;font-size: 18px;height: 60px;line-height: 60px;">确认支付</button>
+ 	</ion-content>
+ 	
+</ion-view>

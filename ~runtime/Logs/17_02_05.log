@@ -1,0 +1,18 @@
+[ 2017-02-05T12:04:56+08:00 ] 103.7.30.68 /weixin_api.php
+ERR: curl出错，错误码:28
+
+[ 2017-02-05T12:39:12+08:00 ] 103.7.30.68 /weixin_api.php
+ERR: curl出错，错误码:28
+
+[ 2017-02-05T13:09:18+08:00 ] 103.7.30.68 /weixin_api.php
+ERR: curl出错，错误码:28
+
+[ 2017-02-05T14:09:29+08:00 ] 103.7.30.68 /weixin_api.php
+ERR: curl出错，错误码:28
+
+[ 2017-02-05T22:20:18+08:00 ] 111.23.123.136 /index.php?m=api&c=app&a=upload_avatar_img2
+ERR: 非法图像文件
+
+[ 2017-02-05T22:20:28+08:00 ] 111.23.123.136 /index.php?m=api&c=app&a=upload_avatar_img2
+ERR: 非法图像文件
+

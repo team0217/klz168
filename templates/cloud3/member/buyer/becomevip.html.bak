@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>个人资料-会员中心-{C('WEBNAME')}</title>
+		<meta name="Keywords" content="个人资料,会员中心,{C('WEBNAME')}" />
+		<meta name="Description" content="个人资料,会员中心,{C('WEBNAME')}" />
+		<link rel="stylesheet" type="text/css" href="{THEME_STYLE_PATH}style/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="{THEME_STYLE_PATH}style/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="{THEME_STYLE_PATH}style/css/user_style.css"/>
+		<script type="text/javascript" src="{THEME_STYLE_PATH}style/js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="{JS_PATH}dialog/jquery.artDialog.js?skin=default"></script>
+		<script type="text/javascript" src="{THEME_STYLE_PATH}style/js/taobao.js"></script>
+	</head>
+	<body>
+		{include template('v2_header','member/common')}
+		
+		<div id="content">
+			<div class="wrap">
+				<p class="hint-wz clear hint_wz_2">
+					当前位置：
+					<b>首页 > </b>
+					<b>会员升级</b>
+				</p>
+			</div>
+			
+			<div class="user_index_content wrap-and clear">
+				{include template('v2_member_left','member/common')}
+				
+				<div class="fr u_index_mess user_pd_1">
+					<h2 class="user_page_title">会员升级</h2>
+					<p class="vip_status"><span class="name">账号：{nickname($this->userinfo['userid'])}</span>,
+					</p>
+					<dl class="vip_tq">
+						<dt>
+						<?php
+						if ($this->userinfo['groupid'] == 2){
+							echo '您已是贵宾会员，可享受';
+						}
+						else if ($this->userinfo['groupid'] == 4){
+							echo '您已是代理商，可享受';
+						}
+						else if ($this->userinfo['groupid'] == 5){
+							echo '您已是总经销，可享受';
+						}else if ($this->userinfo['groupid'] == 6){
+                            echo '您已是总运营商，可享受';
+                        }
+						else{
+							echo '您是普通用户，不能享受';
+						}
+						?>
+						以下五大特权</dt>
+						<dd>
+							<ul class="vip_ico_wrap clear">
+								<li>
+									<p class="vip_ico vip_qd"></p>
+									<p class="vip_txt">签到积分加倍</p>
+								</li>
+								<li>
+									<p class="vip_ico vip_cs"></p>
+									<p class="vip_txt">抢购次数不限</p>
+								</li>
+								<li>
+									<p class="vip_ico vip_qg"></p>
+									<p class="vip_txt">专属抢购</p>
+								</li>
+								<li>
+									<p class="vip_ico vip_sy"></p>
+									<p class="vip_txt">专属试用</p>
+								</li>
+								<li>
+									<p class="vip_ico vip_hd"></p>
+									<p class="vip_txt">专属活动</p>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+					<style>
+					.vip_list_wrap dl:hover{
+						color: #FF6C00;
+					}
+					</style>
+					
+					<div class="vip_list_wrap clear">
+						<!--<dl class="list" title="单击其它项，立即升级">
+							<dt>普通会员</dt>
+							<dd>每日签到奖励积分100分</dd>
+							<dd>每日抢购次数15次</dd>
+							<dd>无特权</dd>
+							<dd>无特权</dd>
+							<dd>无特权</dd>
+						</dl>-->
+						<dl class="list"  title="单击操作" data-type="2" data-money="<?php echo get_member_vip(2);?>" data-url="{U('Member/Profile/check_money')}" onclick="bind.member_vip(this)">
+							<dt>VIP会员（仅需{get_member_vip(2)}）</dt>
+							<dd>签到积分加倍 每日签到奖励积分150分</dd>
+							<dd>每日免审{$level['day_count']}次</dd>
+							<dd>每月免审{$level['month_count']}次</dd>
+							<dd>专属试用</dd>
+							<dd>专属活动 可参加网站不定期组织的活动</dd>
+						</dl>
+						<div class="line"></div>
+						<hr/>
+						<dl class="list"  title="单击操作" data-type="4" data-money="<?php echo get_member_vip(4);?>" data-url="{U('Member/Profile/check_money')}" onclick="bind.member_vip(this)">
+							<dt>代理商（仅需{get_member_vip(4)}）</dt>
+							<dd>签到积分加倍 每日签到奖励积分150分</dd>
+							<dd>每日免审{$level['day_count']}次</dd>
+							<dd>每月免审{$level['month_count']}次</dd>
+							<dd>专属试用</dd>
+							<dd>专属活动 可参加网站不定期组织的活动</dd>
+						</dl>
+						<dl class="list"  title="单击操作" data-type="5" data-money="<?php echo get_member_vip(5);?>" data-url="{U('Member/Profile/check_money')}" onclick="bind.member_vip(this)">
+							<dt>总经销（仅需{get_member_vip(5)}）</dt>
+							<dd>签到积分加倍 每日签到奖励积分150分</dd>
+							<dd>每日免审{$level['day_count']}次</dd>
+							<dd>每月免审{$level['month_count']}次</dd>
+							<dd>专属试用</dd>
+							<dd>专属活动 可参加网站不定期组织的活动</dd>
+						</dl>
+                        <dl class="list"  title="单击操作" data-type="6" data-money="<?php echo get_member_vip(6);?>" data-url="{U('Member/Profile/check_money')}" onclick="bind.member_vip(this)">
+                            <dt>总运营商（仅需{get_member_vip(6)}）</dt>
+                            <dd>签到积分加倍 每日签到奖励积分150分</dd>
+                            <dd>每日免审{$level['day_count']}次</dd>
+                            <dd>每月免审{$level['month_count']}次</dd>
+                            <dd>专属试用</dd>
+                            <dd>专属活动 可参加网站不定期组织的活动</dd>
+                        </dl>
+						<div class="line"></div>
+					</div>
+					
+				</div>
+			</div>
+
+		</div>
+		
+		{include template('footer','common')}
+	</body>
+</html>

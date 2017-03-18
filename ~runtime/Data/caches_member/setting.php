@@ -1,0 +1,1 @@
+a:6:{s:23:"setting_register_enable";a:1:{i:0;s:1:"1";}s:27:"setting_register_sms_enable";a:2:{i:0;s:1:"1";i:1;s:1:"2";}s:30:"setting_register_verify_enable";a:2:{i:0;s:1:"1";i:1;s:1:"2";}s:25:"setting_register_v2_phone";a:1:{i:0;s:1:"1";}s:29:"setting_register_email_enable";a:0:{}s:25:"setting_register_v2_email";a:0:{}}

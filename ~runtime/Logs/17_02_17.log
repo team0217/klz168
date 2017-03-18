@@ -1,0 +1,21 @@
+[ 2017-02-17T08:47:46+08:00 ] 101.226.65.107 /index.php?m=member&c=memberfriend&a=index
+ERR: 无法加载控制器:Memberfriend
+
+[ 2017-02-17T08:47:46+08:00 ] 101.226.33.226 /index.php?m=member&c=memberfriend&a=index
+ERR: 无法加载控制器:Memberfriend
+
+[ 2017-02-17T08:47:46+08:00 ] 101.226.66.187 /index.php?m=member&c=memberfriend&a=index
+ERR: 无法加载控制器:Memberfriend
+
+[ 2017-02-17T10:50:50+08:00 ] 113.219.145.108 /index.php?m=Member&c=Order&a=v2_manage&goods_id=1342&mod=trial&state=1&status=3
+ERR: _STORAGE_WRITE_ERROR_:E:\WWW\klz168.com/~runtime/Cache/Member/54001a5457caefe1e357c225f6c257da.php
+
+[ 2017-02-17T14:05:39+08:00 ] 113.219.145.108 /index.php?m=Member&c=Order&a=v2_manage&goods_id=1446&mod=trial&state=1&status=2&page=1
+ERR: _STORAGE_WRITE_ERROR_:E:\WWW\klz168.com/~runtime/Cache/Member/54001a5457caefe1e357c225f6c257da.php
+
+[ 2017-02-17T17:17:27+08:00 ] 101.226.125.111 /index.php?m=member&c=memberfriend&a=index&page=3
+ERR: 无法加载控制器:Memberfriend
+
+[ 2017-02-17T17:17:41+08:00 ] 101.226.89.123 /index.php?m=member&c=memberfriend&a=index&page=4
+ERR: 无法加载控制器:Memberfriend
+

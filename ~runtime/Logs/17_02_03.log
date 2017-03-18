@@ -1,0 +1,18 @@
+[ 2017-02-03T14:23:03+08:00 ] 183.61.31.130 /index.php?m=Pay&c=Index&a=weixin_pay&money=168&pay_code=Weixin
+ERR: curl出错，错误码:28
+
+[ 2017-02-03T14:58:46+08:00 ] 103.7.30.68 /weixin_api.php
+ERR: curl出错，错误码:28
+
+[ 2017-02-03T15:28:53+08:00 ] 103.7.30.108 /weixin_api.php
+ERR: curl出错，错误码:28
+
+[ 2017-02-03T15:59:01+08:00 ] 103.7.30.68 /weixin_api.php
+ERR: curl出错，错误码:28
+
+[ 2017-02-03T16:29:08+08:00 ] 103.7.30.108 /weixin_api.php
+ERR: curl出错，错误码:28
+
+[ 2017-02-03T17:29:14+08:00 ] 103.7.30.68 /weixin_api.php
+ERR: curl出错，错误码:28
+

@@ -1,0 +1,1 @@
+a:5:{s:5:"quick";a:2:{s:4:"time";s:7:"2小时";s:7:"service";a:2:{s:6:"common";s:3:"0.1";s:3:"vip";s:3:"0.1";}}s:6:"common";a:1:{s:4:"time";s:6:"1-3天";}s:4:"type";a:1:{i:0;s:6:"alipay";}s:9:"min_money";s:1:"1";s:14:"multiple_money";s:1:"1";}

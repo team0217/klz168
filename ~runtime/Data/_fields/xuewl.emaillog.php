@@ -1,0 +1,1 @@
+a:9:{i:0;s:2:"id";i:1;s:6:"userid";i:2;s:5:"email";i:3;s:3:"msg";i:4;s:4:"code";i:5;s:6:"status";i:6;s:8:"posttime";s:3:"_pk";s:2:"id";s:5:"_type";a:7:{s:2:"id";s:21:"mediumint(8) unsigned";s:6:"userid";s:21:"mediumint(8) unsigned";s:5:"email";s:8:"char(32)";s:3:"msg";s:4:"text";s:4:"code";s:8:"char(10)";s:6:"status";s:19:"tinyint(3) unsigned";s:8:"posttime";s:7:"int(10)";}}

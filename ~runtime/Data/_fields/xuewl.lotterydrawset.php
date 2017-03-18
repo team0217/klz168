@@ -1,0 +1,1 @@
+a:5:{i:0;s:4:"rank";i:1;s:6:"chance";i:2;s:5:"class";i:3;s:3:"num";s:5:"_type";a:4:{s:4:"rank";s:6:"int(1)";s:6:"chance";s:7:"int(10)";s:5:"class";s:11:"varchar(10)";s:3:"num";s:7:"int(50)";}}
