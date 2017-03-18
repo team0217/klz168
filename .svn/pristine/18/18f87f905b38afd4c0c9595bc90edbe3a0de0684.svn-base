@@ -1,0 +1,1 @@
+a:7:{i:0;s:2:"id";i:1;s:8:"goods_id";i:2;s:8:"buyer_id";i:3;s:6:"status";i:4;s:8:"dateline";s:3:"_pk";s:2:"id";s:5:"_type";a:5:{s:2:"id";s:16:"int(10) unsigned";s:8:"goods_id";s:16:"int(10) unsigned";s:8:"buyer_id";s:16:"int(10) unsigned";s:6:"status";s:19:"tinyint(3) unsigned";s:8:"dateline";s:16:"int(10) unsigned";}}

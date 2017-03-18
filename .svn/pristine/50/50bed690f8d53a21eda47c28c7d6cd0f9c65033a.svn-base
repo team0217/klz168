@@ -1,0 +1,1 @@
+a:1:{s:9:"qqconnect";a:2:{s:5:"appid";s:9:"101184665";s:6:"appkey";s:32:"55264cc8dff6969b2446bf054ae22f69";}}

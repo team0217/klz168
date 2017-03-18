@@ -1,0 +1,1 @@
+a:6:{i:0;s:3:"key";i:1;s:5:"value";i:2;s:8:"issystem";i:3;s:9:"listorder";s:3:"_pk";s:3:"key";s:5:"_type";a:4:{s:3:"key";s:12:"varchar(100)";s:5:"value";s:4:"text";s:8:"issystem";s:19:"tinyint(1) unsigned";s:9:"listorder";s:20:"smallint(6) unsigned";}}

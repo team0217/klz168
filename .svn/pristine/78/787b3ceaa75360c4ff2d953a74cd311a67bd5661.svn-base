@@ -1,0 +1,83 @@
+<ion-view view-title="淘金呗">
+  <ion-content  style="background-color:#F8F8F8">
+      <div class="i_userCenter3">
+          <p>总金额（元）</p>
+          <h2 style="color: #fff">{{yeb_money}}</h2>
+      </div>
+    <ion-list >
+
+        <div class="i_userCenter4" style="border-bottom: 1px solid #ddd">
+            <div class="left">
+                <p>万元收益</p>
+                <h3>{{rate}}</h3>
+                <div class="clear"></div>
+            </div>
+            <div class="left">
+                <p>昨日收益</p>
+                <h3>{{yesterday_yeb}}</h3>
+                <div class="clear"></div>
+            </div>
+
+            <div class="right">
+                <p>预计今日</p>
+                <h3>{{today_yeb}}</h3>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="clear"></div>
+      <div class="padding-left padding-right padding-top " style="overflow: hidden" >
+        <button ng-click="yeb_in(1)" class="button  button-positive change_to_btn "  >转入</button>
+        <button ng-click="yeb_in(2)" class="button  button-assertive change_to_btn " >转出</button>
+          <div class="clear"></div>
+      </div>
+
+        <div class="padding-left padding-right padding-top " style="overflow: hidden" >
+            <a class="button button-block button-balanced  " href="#/tab/user/yeb" >明细</a>
+
+
+        </div>
+
+    </ion-list>
+
+  </ion-content>
+
+  <script id="b.html" type="text/ng-template"> 
+  // <ion-modal-view>
+
+  // <ion-header-bar>
+  //    <a class="button  " ng-click="closeModal();">返回</a>
+  //   <h1 class="title" style="text-align:center;" >兴趣爱好</h1>
+  // </ion-header-bar>
+
+  // <ion-content >
+
+  // <ion-checkbox ng-model="d.selected"  ng-repeat="d in categorylists.lists" >
+  //    {{d.catname}} {{d.selected}}
+  // </ion-checkbox>
+
+  // </ion-content>
+  // </ion-modal-view> 
+  </script>
+
+
+  <script id="c.html" type="text/ng-template"> 
+  // <ion-modal-view >
+
+  // <ion-header-bar>
+  //    <a class="button" ng-click="closeModal()">返回</a>
+  //   <h1 class="title" style="text-align:center;" >选择喜欢的商品分类</h1>
+  // </ion-header-bar>
+
+  // <ion-content >
+  // <ion-checkbox ng-model="d.selected"  ng-repeat="d in categorylists.lists" >
+  //    {{d.catname}} {{d.selected}}
+  // </ion-checkbox>
+
+  // <button class="button button-block button-assertive" ng-click="Selection_classification(d.catname)">退出登录</button>
+
+  // </ion-content>
+  // </ion-modal-view> 
+  </script>
+
+</ion-view>

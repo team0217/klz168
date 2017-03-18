@@ -1,0 +1,3 @@
+<?php
+//000000000060a:5:{i:0;a:3:{s:6:"totals";s:3:"899";s:6:"userid";s:2:"43";s:8:"nickname";s:0:"";}i:1;a:3:{s:6:"totals";s:2:"46";s:6:"userid";s:3:"497";s:8:"nickname";s:6:"尹恬";}i:2;a:3:{s:6:"totals";s:2:"40";s:6:"userid";s:3:"255";s:8:"nickname";s:9:"马莹莹";}i:3;a:3:{s:6:"totals";s:2:"37";s:6:"userid";s:3:"323";s:8:"nickname";s:6:"邓飞";}i:4;a:3:{s:6:"totals";s:2:"37";s:6:"userid";s:2:"86";s:8:"nickname";s:9:"黄琼芳";}}
+?>

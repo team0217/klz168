@@ -1,0 +1,36 @@
+<ion-view hide-nav-bar="true" >
+  <div class="bar bar-header bar-stable ">
+    <a href="#/tab/article" class="button icon ion-ios-arrow-back button-clear head_button1"></a>
+    <h1 class="title">如何成为快乐挣VIP会员</h1>
+  </div>
+  <ion-content class="padding_head">
+
+    <div class="ibody">
+      <div class="i_tryDetail3">
+        <div class="part">
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td width="25" class="L">
+                <div class="co co1">&nbsp;</div>
+              </td>
+              <td class="R">
+                <div class="p1">在PC端打开快乐挣进入用户中心 </div>
+                <div class="p2">
+                  点击“立即升级VIP用户”
+               </div>
+			    <div><img padding:0px="" 2px;="" src="img/a111.png" style="width:75%;"></div>
+				  <div class="p2">
+                  再点击“立即升级VIP用户”
+               </div>
+			    <div><img padding:0px="" 2px;="" src="img/a112.png" style="width:75%;"></div>
+              </td>
+              </tr>
+            </table>
+          </div>
+   
+                        <!--part--> </div>
+                      <!--i_tryDetail2--> </div>
+                    <!--ibody-->
+  </ion-content>
+
+</ion-view>

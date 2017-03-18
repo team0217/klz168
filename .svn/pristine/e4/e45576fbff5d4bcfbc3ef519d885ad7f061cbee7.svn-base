@@ -1,0 +1,1 @@
+a:7:{i:0;s:9:"keywordid";i:1;s:7:"keyword";i:2;s:9:"inputtime";i:3;s:9:"listorder";i:4;s:11:"replaceword";s:3:"_pk";s:9:"keywordid";s:5:"_type";a:5:{s:9:"keywordid";s:16:"int(10) unsigned";s:7:"keyword";s:12:"varchar(255)";s:9:"inputtime";s:16:"int(10) unsigned";s:9:"listorder";s:20:"smallint(6) unsigned";s:11:"replaceword";s:11:"varchar(50)";}}

@@ -1,0 +1,1 @@
+a:7:{i:0;s:2:"id";i:1;s:3:"uid";i:2;s:10:"serial_num";i:3;s:8:"dateline";i:4;s:2:"ip";s:3:"_pk";s:2:"id";s:5:"_type";a:5:{s:2:"id";s:7:"int(10)";s:3:"uid";s:7:"int(10)";s:10:"serial_num";s:16:"int(10) unsigned";s:8:"dateline";s:16:"int(10) unsigned";s:2:"ip";s:8:"char(15)";}}

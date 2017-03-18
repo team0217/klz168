@@ -1,0 +1,1 @@
+a:8:{s:14:"alipay_account";s:17:"1468432267@qq.com";s:10:"alipay_key";s:32:"w38umwwbc69auaq30kmn8681yykpofbg";s:14:"alipay_partner";s:16:"2088411293831576";s:12:"service_type";s:1:"2";s:10:"merchantid";s:0:"";s:3:"key";s:0:"";s:17:"chinabank_account";s:0:"";s:13:"chinabank_key";s:0:"";}

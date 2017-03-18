@@ -1,0 +1,1 @@
+a:6:{i:0;s:10:"identifier";i:1;s:7:"content";i:2;s:8:"dateline";i:3;s:4:"type";s:3:"_pk";s:10:"identifier";s:5:"_type";a:4:{s:10:"identifier";s:12:"varchar(200)";s:7:"content";s:4:"text";s:8:"dateline";s:16:"int(10) unsigned";s:4:"type";s:12:"varchar(100)";}}

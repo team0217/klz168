@@ -1,0 +1,1 @@
+a:2:{s:10:"wap_enable";s:1:"0";s:10:"wap_domain";s:12:"m.klz168.com";}
