@@ -55,7 +55,6 @@ class trial_product extends \Product\Library\ProductInterface {
      * $bind_id : 选择购买的淘宝帐号
      */
     public function pay_submit($talk = '',$bind_id = 0,$data_type=0) {
-        
     	vendor('Redisent');
     	$this->redis=new \Redisent( C('REDIS_HOST'), C('REDIS_PORT'));
     	$this->redis->auth(C('REDIS_PWD'));
@@ -133,8 +132,6 @@ class trial_product extends \Product\Library\ProductInterface {
             }
 
             $info['talk']      = trim($talk);
-            dump($info['talk']);
-            exit;
             $info['bind_id']   = $bind_id;
             $order_id = model('order')->update($info);
           
@@ -182,7 +179,6 @@ class trial_product extends \Product\Library\ProductInterface {
         } 
         /*  用户等级当天限制额度 */
         if($this->user_info['groupid'] == 6){
-            
         	 $limit_cost=5000;
         }elseif ($this->user_info['groupid'] == 5)
         {
@@ -200,10 +196,8 @@ class trial_product extends \Product\Library\ProductInterface {
         	$this->error = '普通会员不能参与，请先升级会员帐号';
         	return FALSE;
         }
-        dump($this->user_info['userid'].'_'.date("md"));
+        
         $cost=floatval($this->redis->get($this->user_info['userid'].'_'.date("md")));
-        dump($cost);
-        exit;
         $cost+=floatval($this->product_info['goods_price']);
         if($cost>$limit_cost){
         	$over=sprintf("%.2f", $cost-$limit_cost);
@@ -281,7 +275,7 @@ class trial_product extends \Product\Library\ProductInterface {
             $o_map['status'] = array('NOT IN',array('0','7'));
             $is_over = model('order')->where($o_map)->count();
             if ($is_over > 0) {
-                $tihs->error = '当前还有未完成的订单，请订单完成后再继续下单';
+                $this->error = '当前还有未完成的订单，请订单完成后再继续下单';
                 return FALSE;
             }
         }       
