@@ -3,7 +3,7 @@ return array(
 	// 数据库配置
   	'DB_TYPE'               =>  'Mysql',     // 数据库类型
     'DB_HOST'               =>  '127.0.0.1', 	// 服务器地址
-    'DB_NAME'               =>  'xuewl',          // 数据库名
+    'DB_NAME'               =>  'test',          // 数据库名
     'DB_USER'               =>  'root',      // 用户名
     'DB_PWD'                =>  '123456',          // 密码
     'DB_PORT'               =>  '3306',        // 端口
@@ -14,7 +14,7 @@ return array(
     'DB_DEPLOY_TYPE'        =>  0, // 数据库部署方式:0 集中式(单一服务器),1
 	
 	
-	'REDIS_HOST' =>'r-wz9053c70d6df154.redis.rds.aliyuncs.com',
+	'REDIS_HOST' =>'118.190.41.0',
 	'REDIS_PORT' =>'6379',
-	'REDIS_PWD' =>'qweqwqwWQEWEQWE12123WEQW',
+	'REDIS_PWD' =>'123456',
 );
