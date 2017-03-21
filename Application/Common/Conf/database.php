@@ -16,5 +16,5 @@ return array(
 	
 	'REDIS_HOST' =>' r-bp1d1695b6fcfe44.redis.rds.aliyuncs.com',
 	'REDIS_PORT' =>'6379',
-	'REDIS_PWD' =>'123456',
+	'REDIS_PWD' =>'123456789',
 );
