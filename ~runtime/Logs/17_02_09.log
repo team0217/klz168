@@ -1,0 +1,15 @@
+[ 2017-02-09T04:03:06+08:00 ] 66.249.69.154 /index.php?m=Order&c=DoOrder&a=manage
+ERR: 无法加载控制器:DoOrder
+
+[ 2017-02-09T11:19:48+08:00 ] 113.219.129.121 /index.php?m=Pay&c=Index&a=weixin_pay&money=10&pay_code=Weixin
+ERR: curl出错，错误码:28
+
+[ 2017-02-09T11:54:53+08:00 ] 103.7.30.108 /weixin_api.php
+ERR: curl出错，错误码:28
+
+[ 2017-02-09T12:55:04+08:00 ] 103.7.30.68 /weixin_api.php
+ERR: curl出错，错误码:28
+
+[ 2017-02-09T13:25:11+08:00 ] 103.7.30.68 /weixin_api.php
+ERR: curl出错，错误码:28
+

@@ -1,0 +1,1 @@
+a:8:{i:0;s:20:"lottery_draw_list_id";i:1;s:6:"userid";i:2;s:4:"time";i:3;s:5:"class";i:4;s:6:"number";i:5;s:4:"rank";s:3:"_pk";s:20:"lottery_draw_list_id";s:5:"_type";a:6:{s:20:"lottery_draw_list_id";s:7:"int(10)";s:6:"userid";s:7:"int(10)";s:4:"time";s:12:"varchar(100)";s:5:"class";s:12:"varchar(100)";s:6:"number";s:12:"varchar(100)";s:4:"rank";s:10:"varchar(1)";}}

@@ -1,0 +1,1 @@
+a:6:{i:0;s:20:"lottery_draw_set2_id";i:1;s:16:"lottery_draw_num";i:2;s:28:"lottery_draw_num_after_share";i:3;s:9:"rank6_max";s:3:"_pk";s:20:"lottery_draw_set2_id";s:5:"_type";a:4:{s:20:"lottery_draw_set2_id";s:7:"int(10)";s:16:"lottery_draw_num";s:7:"int(11)";s:28:"lottery_draw_num_after_share";s:7:"int(10)";s:9:"rank6_max";s:7:"int(11)";}}

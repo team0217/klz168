@@ -1,0 +1,82 @@
+<ion-view hide-nav-bar="true" >
+    <div class="bar bar-header bar-color ">
+	<!--原免费试用-->
+    <button  ng-click="toggleLeft()"  style="color:#ffffff;" class="button icon ion-navicon button-clear "></button>
+    <h1 class="title">闪电佣金</h1>
+    <a href="#/tab/so" style="color:#ffffff;" class="button icon ion-search button-clear head_buttonr1"></a>
+   </div>
+  <ion-side-menus class="padding_head">
+    <ion-side-menu-content>
+         <div class="bar bar-subheader">
+                 <div class="button-bar sub_header_list c5" id="sub_header_list">
+                     <a class="button button-clear sub_button_select" ng-click="changeTab('id',0)">默认</a>
+                     <a class="button button-clear " ng-click="changeTab('hits',1)">人气</a>
+                     <a class="button button-clear" ng-click="changeTab('goods_price',2)">价值</a>
+                     <a class="button button-clear" ng-click="changeTab('start_time',3)">时间</a>
+                 </div>
+         </div>
+
+      <ion-content class="has-subheader" style="background-color:#F8F8F8">
+
+       <ion-refresher pulling-text="下拉刷新" pulling-icon="ion-loading-c" refreshing-text="刷新成功" 
+             refreshing-icon="ion-loading-c" on-refresh="doRefresh()">
+             </ion-refresher>
+
+          <div ng-if="showloading" style="margin-top:60px; text-align: center">
+                 <ion-spinner icon="ios" style="height: 60px; width: 60px;;"></ion-spinner>
+          </div>
+
+        <ion-list ng-if="showloading==false" class="list padding-top">
+          
+          
+
+              <div ng-if="showloading" style="text-align: center">
+        <ion-spinner icon="ios" style="height: 60px; width: 60px;;"></ion-spinner>
+      </div>
+
+      <div class="indexProList"  ng-if="showloading ==false" >
+
+        <a class="part" href="#/tab/trial/{{topic.id}}" ng-repeat="topic in goods "   >
+          <div class="co">
+            <div class="a1">
+              <img ng-src="{{topic.thumb |imgUrl}}" />
+            </div>
+            <div class="a2">{{ topic.title | limitTo:15 }}</div>
+            <div class="a3">
+              <div class="L">￥{{topic.goods_price}}</div>
+              <div class="R">佣金{{topic.goods_bonus}}元</div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          </a>
+        <div class="clearfix"></div>
+      </div>
+
+
+
+        </ion-list>
+
+        <ion-infinite-scroll
+                    pulling-text="加载更多中"
+                    on-infinite="loadMore()"
+                    ng-if="trial_list_hasNextPage"
+                    distance="1%">
+      </ion-infinite-scroll>
+
+</ion-content>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" width="myWidthValue + 150">
+    <a menu-close href="#/trial" class="item">产品分类</a>
+
+    <a menu-close ng-click="good1(0)"  href="#/tab/trial" class="item item-icon-right">全部分类
+    <i class="icon ion-ios-arrow-right" style="font-size:18px;color:#666"></i>
+    </a>
+
+    <a menu-close ng-click="good1({{d.catid}})" ng-repeat="d in categorylists" class="item item-icon-right">{{d.catname}}
+    <i class="icon ion-ios-arrow-right" style="font-size:18px;color:#666"></i>
+    </a>
+    </ion-side-menu>
+  </ion-side-menus>
+  </ion-view>
+
+

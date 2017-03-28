@@ -1,0 +1,145 @@
+<ion-view hide-nav-bar="true">
+  <div class="bar bar-header bar-color ">
+  <a href="#/tab/duo" style="color:#ffffff;" class="button icon ion-ios-arrow-back button-clear head_button1"></a>
+  <h1 class="title">邀请好友</h1>
+  <!--<a  ng-click="set_invitation_log()" style="color:#ffffff;" class="button button-clear head_button1">奖励明细</a>-->
+  </div>
+<ion-content class="padding_head">
+    <div class="ibody">
+      <div class="i_invite">
+        <div class="s_part1">
+          <img ng-src="img/a34.jpg"></div>
+            <div class="s_part2" ng-if="login_status ==1">
+                <div class="hang1 c4">
+                  您的专属邀请链接已生成
+                  <span>开始赚钱了</span>
+                </div>
+                   <div class="hang2">
+                    <div class="bdsharebuttonbox" data-tag="share_1">
+                      <a href="#" class="bds_more" data-cmd="more"></a>
+                      <a>分享邀请链接</a>
+                      <a href="#" class="bds_copy"  ng-click="arturl()"></a>
+                      <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+                      <a href="#" class="bds_mshare" data-cmd="mshare" title="分享到一键分享"></a>
+                      <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+                      <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+                      <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+                    </div>
+                  </div>
+              <div class="hang1 c5">
+                已邀请：<span>{{user_num}} </span> 名好友  
+                已获得: <span>{{total_moeny}}元</span>
+              </div>
+            </div>
+
+
+        <!-- JiaThis Button BEGIN -->
+        <div class="jiathis_style_m"></div>
+
+        <!-- JiaThis Button END -->
+
+
+
+        <div class="s_part2" ng-if="login_status ==0">
+          <div class="hang1">
+            您还未登录 登录后开始赚钱
+          </div>
+          <div class="hang1">
+            <a href="#/tab/user/login" class="button button-assertive button-outline ">立即登录/注册</a>
+          </div>
+          <div class="hang1">
+            <span>推荐一名好友最高得百元现金奖励</span>
+          </div>
+        </div>
+				
+				
+				<!--s_part2-->
+        <div class="s_part3" style="border-bottom: 1px solid #eeeeee;">
+          <div class="ti" style="background: rgba(238,238,238,.5);height: 30px;line-height: 30px;">我的好友</div>
+          <div style="width: 100%;">
+          	<div style="width: 25%;float: left;padding-left: 10px;"><span style="background: #ff9200;color: #fff;padding: 0 5px;">等级</span></div>
+          	<div style="width: 25%;float: left;text-align: center;color: #565656;">一级</div>
+          	<div style="width: 25%;float: left;text-align: center;color: #565656;">二级</div>
+          	<div style="width: 25%;float: left;text-align: center;color: #565656;">三级</div>
+          	<div class="clearfix"></div>
+          </div>
+          <div style="width: 100%;margin-top: 10px;margin-bottom: 10px;">
+          	<div style="width: 25%;float: left;padding-left: 10px;"><span style="background: #ff9200;color: #fff;padding: 0 5px;">人数</span></div>
+
+			<div ng-repeat="ac in agentCount.data">
+          		<div style="width: 25%;float: left;text-align: center;color: #979797;">{{ac.count}}</div>
+          	</div>
+
+          	<div class="clearfix"></div>
+          </div>
+        </div>
+        
+        <!--s_part2-->
+        <div class="s_part3">
+          <div class="ti" style="background: rgba(238,238,238,.5);height: 30px;line-height: 30px;">排行榜</div>
+          <div class="ti2 c5">
+            <div class="a1">排名</div>
+            <div class="a2">用户名称</div>
+            <div class="a3">获得的奖励金额</div>
+            <div class="clearfix"></div>
+          </div>
+          <!--ti2-->
+          <div class="list">
+
+            <div class="hang c4" ng-repeat="d in user_paihang.data">
+              <div class="a1">
+                <div>{{$index +1}}</div>
+              </div>
+              <div class="a2">{{d.nickname}}</div>
+              <div class="a3">{{d.total}}元</div>
+              <div class="clearfix"></div>
+            </div>
+            <!--hang-->
+
+            <!--hang--> </div>
+          <!--list--> </div>
+        <!--s_part3-->
+        
+        <script type="text/javascript">
+      $('.i_invite .s_part3 .list .hang:eq(0)').find('.a1 div').css('background','#e42012')
+      $('.i_invite .s_part3 .list .hang:eq(1)').find('.a1 div').css('background','#e30f55')
+      $('.i_invite .s_part3 .list .hang:eq(2)').find('.a1 div').css('background','#f69f94')
+
+    </script>
+  <!--    <div class="s_part4">
+          <div class="ti">邀请好友奖励示意图</div>
+          <div class="list c4">
+            <div class="hang">
+              <div class="L">好友手机认证</div>
+              <div class="R">{{config_data.data.fix.cost}} {{config_data.data.fix.type | f_m_type  }}</div>
+            </div>
+         
+            <div class="hang" ng-repeat="d in config_data.data.setting">
+              <div class="L">好友累积完成{{d.num}}单</div>
+              <div class="R">{{d.cost}} {{d.type | f_m_type  }}</div>
+            </div>
+ 
+         </div>
+          </div>-->
+        <!--s_part4-->
+           <div class="s_part4">
+          <div class="ti"style="background: rgba(238,238,238,.5);height: 30px;line-height: 30px;">邀请规则</div>
+          <div class="list c4">
+            <div class="hang">邀请的好友完成会员升级即视为邀请成功</div>
+            <div class="hang"><span style="color:#ff9200;">普通会员请在PC端升级账号</span></div>
+            <div class="hang">您可以把您的专用邀请链接通过QQ.微信.分享给您的朋友，也可以分享到您的朋友圈里面去。</div><br>
+            <div class="hang">如发现有活动作弊,一律取消奖励,严重则直接永久封号</div><br>
+          </div>
+        <div class="s_part5">
+          <div class="ti"style="background: rgba(238,238,238,.5);height: 30px;line-height: 30px;">奖励规则</div>
+          <div class="list c4">
+            <div class="hang">vip会员：成功邀请一位好友注册成为自己的伙伴即可获得好友参与闪电佣金活动金额1%的奖励。</div><br><br>
+            <div class="hang">代理商： 享有VIP会员邀请奖励内容外还可获得二级好友推荐费的100元奖励。</div><br>
+            <div class="hang">总经销商：享有VIP会员邀请奖励内容外还可获得二级好友闪电佣金活动金额1%的奖励。</div><br><br>
+            <div class="hang">总运营商：享有总经销商邀请奖励内容外还可获得三级好友闪电佣金活动金额1%的奖励。</div><br><br>
+          </div>
+          <!--list--> </div>
+        <!--s_part5--> </div>
+      <!--i_invite--> </div>
+  </ion-content>
+</ion-view>

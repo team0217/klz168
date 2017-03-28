@@ -1,0 +1,146 @@
+<ion-view hide-nav-bar="true">
+	<style>
+		.appoint{
+			color: rgb(245,90,78);
+			border-bottom: 2px solid rgb(245,90,78);
+			
+			
+		}
+		.mask{
+			position: absolute;
+			background: #fff;
+			width: 100%;
+			height: 0;
+			bottom: 0;
+		}
+		.mask div{
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px solid #ddd;
+			font-size: 14px;
+		}
+		.mask div a{
+			display: block;
+			color: #000;
+		}
+		.tishi{
+			position: absolute;
+			background: #fff;
+			width: 100%;
+			height: 0px;
+			bottom: 0;
+		}
+		.tishi p{
+			height: 35px;
+			line-height: 35px;
+			margin: 0;
+			text-align: center;
+			font-size: 14px;
+		}
+		.vip {
+			float: left;
+			width: 50%;
+			text-align: center;
+			font-size: 14px;
+			font-weight: 600;
+			padding-bottom: 10px;
+		}
+	</style>
+ 	<div class="bar bar-header  bar-stable ">
+ 		<a href="#/tab/user" class="button icon ion-ios-arrow-back button-clear "></a>
+    	<!--<a class="button  button-clear button-dark icon ion-ios-arrow-back"  href="#/tab/user"></a>
+-->  		<h1 class="title">账号升级</h1>
+ 	</div>
+ 	<ion-content class="padding_head">
+    	<div style="width: 100%;height: 168px;margin-bottom: 5px;padding: .30px;">
+    		<img src="img/klzweb.png" style="width: 100%;height: 168px;border: none;">
+    	</div>
+    	
+    	<div class="list" style="margin-bottom: 3rem;">
+		 	<div class="vip appoint" >vip会员</div>
+		 	<div class="vip">代理商</div>
+		 	<!--<div class="vip" style="float: left;width: 25%;text-align: center;font-weight:600;padding-bottom: 2px;">总经销商</div>
+		 	<div class="vip" style="float: left;width: 25%;text-align: center;font-weight:600;padding-bottom: 2px;">总运营商</div>-->
+		</div>
+		
+		<script>
+			$(function(){
+				var index=0;
+				
+				$('.money').text(168);//默认的金额
+				sessionStorage.setItem('money',$('.money').text());//把价格存储到本地存储
+				
+				$('.vip').click(function(){   //选择vip的等级
+					index=$(this).index();
+					$(this).addClass('appoint').siblings().removeClass('appoint');
+					if (index==0){
+						$('.money').text(168);
+						//$('.commision').text("1元-300元"); 
+						$('.reward').text("推荐奖励1%");
+					}else{
+						$('.money').text(1688);
+						//$('.commision').text("1元-300元");
+						$('.reward').text("推荐奖励1%,推荐费用100元");
+					}/*else if(index==2){
+						$('.money').text(16888);
+						$('.commision').text("1元-500元");
+						$('.reward').text("推荐奖励1%，合作伙伴2级");
+					}else{
+						$('.money').text(168888);
+						$('.commision').text("1元-500元");
+						$('.reward').text("推荐奖励1%，合作伙伴3级");
+					}*/
+					sessionStorage.setItem('money',$('.money').text());//把价格存储到本地存储
+				})
+				
+				$('.button-assertive').click(function(event){  //是否确定升级vip
+					if (index==0){
+						$('.mask').stop().animate({'height':120},500)
+						$('.text').text('是/否花费'+$('.money').text()+'元升级为'+$('.appoint').text());
+					}else{
+						$('.tishi').stop().animate({'height':105},500)
+					}
+					event.stopPropagation();
+				})
+				$('.cancel').click(function(event){
+					$('.mask').stop().animate({'height':0},500);
+					event.stopPropagation();
+				})
+				$('body,html').click(function(){
+					$('.mask').stop().animate({'height':0},500);
+					$('.tishi').stop().animate({'height':0},500);
+				})
+			})
+		</script>
+		
+    	<ul class="list" style="margin-bottom: 0;">
+		    <li class="item" style="margin-bottom: 20px;height: 64px;padding: 0;line-height: 64px;">
+		      	<span style="padding-left: 15px;color: #000;font-size: 14px;font-weight: 600;">佣金费用奖励</span>
+		      	<b class="commision" style="padding-left: 30px;color: #000;font-size: 14px;font-weight: 600;">1元-300元</b>
+		    </li>
+		    <li class="item" style="margin-bottom: 20px;height: 64px;padding: 0;line-height: 64px;">
+		      	<span style="padding-left: 15px;color: #000;font-size: 14px;font-weight: 600;">推荐奖金规则</span>
+		      	<b class="reward" style="padding-left: 30px;color: #000;color: red;font-size: 14px;font-weight: 600;">推荐奖励1%</b>
+		    </li>
+		    <li class="item" style="margin-bottom: 30px;height: 64px;padding: 0;line-height: 64px;">
+		      	<span style="padding-left: 15px;color: #000;font-size: 14px;font-weight: 600;">支付金额</span>
+		      	<b style="padding-left: 30px;color: #000;font-size: 14px;font-weight: 600;"><font class="money" style="color: red;"></font>元</b>
+		    </li>
+		</ul>
+		
+		<a class="button button-block button-assertive" style="width: 90%;margin: auto;margin-top: 0;height: 60px;font-size: 18px;line-height: 60px;">
+  			立即升级
+		</a>
+ 	</ion-content>
+	<div class="mask">
+		<div class="text" style="color: red;"></div>
+		<div><a href="#/tab/user/payment">确定</a></div>
+		<div class="cancel">取消</div>
+	</div>
+	<div class="tishi">
+		<p>升级为代理商请联系客服</p>
+		<p>客服QQ：888888888</p>
+		<p>客服联系电话：0852-11124545</p>
+	</div>
+</ion-view>

@@ -1,0 +1,1 @@
+a:7:{i:0;s:6:"menuid";i:1;s:6:"userid";i:2;s:4:"name";i:3;s:3:"url";i:4;s:8:"datetime";s:3:"_pk";s:6:"menuid";s:5:"_type";a:5:{s:6:"menuid";s:21:"mediumint(8) unsigned";s:6:"userid";s:21:"mediumint(8) unsigned";s:4:"name";s:8:"char(32)";s:3:"url";s:9:"char(255)";s:8:"datetime";s:16:"int(10) unsigned";}}

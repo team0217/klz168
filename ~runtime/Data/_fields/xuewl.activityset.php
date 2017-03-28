@@ -1,0 +1,1 @@
+a:5:{i:0;s:3:"key";i:1;s:5:"value";i:2;s:13:"activity_type";i:3;s:7:"settime";s:5:"_type";a:4:{s:3:"key";s:12:"varchar(255)";s:5:"value";s:4:"text";s:13:"activity_type";s:11:"varchar(50)";s:7:"settime";s:20:"tinyint(10) unsigned";}}
